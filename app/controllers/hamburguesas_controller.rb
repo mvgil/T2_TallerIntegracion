@@ -36,9 +36,10 @@ class HamburguesasController < ApplicationController
     
     @descripcion = params[:descripcion]
     @precio = params[:precio]
+    #@ham.save
 
     respond_to do |format|
-      if @hamburguesa.save
+      if @ham.save
         format.html { redirect_to @hamburguesa, notice: 'Hamburguesa was successfully created.' }
         format.json { render :show, status: :created, location: @hamburguesa }
       else

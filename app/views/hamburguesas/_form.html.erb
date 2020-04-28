@@ -1,0 +1,32 @@
+<%= form_with(model: hamburguesa, local: true) do |form| %>
+  <% if hamburguesa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hamburguesa.errors.count, "error") %> prohibited this hamburguesa from being saved:</h2>
+
+      <ul>
+      <% hamburguesa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :hamburguesa_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precio %>
+    <%= form.number_field :precio, id: :hamburguesa_precio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_area :descripcion, id: :hamburguesa_descripcion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

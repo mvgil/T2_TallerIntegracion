@@ -1,5 +1,6 @@
 class HamburguesasController < ApplicationController
   before_action :set_hamburguesa, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /hamburguesas
   # GET /hamburguesas.json

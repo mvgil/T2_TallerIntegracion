@@ -6,14 +6,14 @@ class HamburguesasController < ApplicationController
   # GET /hamburguesas.json
   def index
     @hamburguesas = Hamburguesa.all
-    render json: @hamburguesas
+    render json: @hamburguesas, :except => [:created_at, :updated_at]
   end
 
   # GET /hamburguesas/1
   # GET /hamburguesas/1.json
   def show
     @hamburguesa = Hamburguesa.find(params[:id])
-    render json: @hamburguesa
+    render json: @hamburguesa, :except => [:created_at, :updated_at]
   end
 
   # GET /hamburguesas/new

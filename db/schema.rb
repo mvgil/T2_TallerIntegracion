@@ -26,8 +26,6 @@ ActiveRecord::Schema.define(version: 20200427235646) do
     t.string "nombre"
     t.integer "precio"
     t.text "descripcion"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "ingredientes", force: :cascade do |t|

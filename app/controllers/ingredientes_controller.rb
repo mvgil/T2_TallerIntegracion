@@ -1,5 +1,6 @@
 class IngredientesController < ApplicationController
   before_action :set_ingrediente, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /ingredientes
   # GET /ingredientes.json

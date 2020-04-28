@@ -32,19 +32,20 @@ class HamburguesasController < ApplicationController
     #@hamburguesa = Hamburguesa.new(params)
     #render json: {"hola": "veamos"}
     @nombre = params[:nombre]
-    @ham = Hamburguesa.find_or_create_by(nombre: @nombre )
-    
     @descripcion = params[:descripcion]
     @precio = params[:precio]
+    @ham = Hamburguesa.create_by(nombre: @nombre, precio: @precio,descripcion: @descripcion  )
+    
+    
     #@ham.save
 
     respond_to do |format|
       if @ham.save
-        format.html { redirect_to @hamburguesa, notice: 'Hamburguesa was successfully created.' }
+        format.html { redirect_to @ham, notice: 'Hamburguesa was successfully created.' }
         format.json { render :show, status: :created, location: @hamburguesa }
       else
         format.html { render :new }
-        format.json { render json: @hamburguesa.errors, status: :unprocessable_entity }
+        format.json { render json: @ham.errors, status: :unprocessable_entity }
       end
     end
   end

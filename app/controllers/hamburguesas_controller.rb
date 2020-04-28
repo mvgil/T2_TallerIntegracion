@@ -5,11 +5,14 @@ class HamburguesasController < ApplicationController
   # GET /hamburguesas.json
   def index
     @hamburguesas = Hamburguesa.all
+    render json: @hamburguesas
   end
 
   # GET /hamburguesas/1
   # GET /hamburguesas/1.json
   def show
+    @hamburguesa = Hamburguesa.find(params[:id])
+    render json: @hamburguesa
   end
 
   # GET /hamburguesas/new

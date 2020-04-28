@@ -29,6 +29,7 @@ class HamburguesasController < ApplicationController
   # POST /hamburguesas.json
   def create
     @hamburguesa = Hamburguesa.new(hamburguesa_params)
+    render json: hamburguesa_params
 
     respond_to do |format|
       if @hamburguesa.save

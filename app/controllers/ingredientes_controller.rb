@@ -6,6 +6,7 @@ class IngredientesController < ApplicationController
   # GET /ingredientes.json
   def index
     @ingredientes = Ingrediente.all
+    render json: @ingredientes, :except => [:created_at, :updated_at]
   end
 
   # GET /ingredientes/1

@@ -34,7 +34,7 @@ class HamburguesasController < ApplicationController
     @nombre = params[:nombre]
     @descripcion = params[:descripcion]
     @precio = params[:precio]
-    @ham = Hamburguesa.create_by(nombre: @nombre, precio: @precio,descripcion: @descripcion  )
+    @ham = Hamburguesa.find_or_create_by(nombre: @nombre, precio: @precio,descripcion: @descripcion  )
     
     
     #@ham.save

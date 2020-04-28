@@ -28,9 +28,14 @@ class HamburguesasController < ApplicationController
   # POST /hamburguesas
   # POST /hamburguesas.json
   def create
-    render json: params
-    @hamburguesa = Hamburguesa.new(params)
+    #render json: params
+    #@hamburguesa = Hamburguesa.new(params)
     #render json: {"hola": "veamos"}
+    @nombre = params[:nombre]
+    @ham = Hamburguesa.find_or_create_by(nombre: @nombre )
+    
+    @descripcion = params[:descripcion]
+    @precio = params[:precio]
 
     respond_to do |format|
       if @hamburguesa.save

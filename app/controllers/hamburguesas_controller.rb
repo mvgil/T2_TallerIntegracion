@@ -28,6 +28,7 @@ class HamburguesasController < ApplicationController
   # POST /hamburguesas
   # POST /hamburguesas.json
   def create
+    render json: params
     @hamburguesa = Hamburguesa.new(params)
     #render json: {"hola": "veamos"}
 

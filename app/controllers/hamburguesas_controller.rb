@@ -28,8 +28,8 @@ class HamburguesasController < ApplicationController
   # POST /hamburguesas
   # POST /hamburguesas.json
   def create
-    @hamburguesa = Hamburguesa.new(hamburguesa_params)
-    render json: {"hola": "veamos"}
+    @hamburguesa = Hamburguesa.new(params)
+    #render json: {"hola": "veamos"}
 
     respond_to do |format|
       if @hamburguesa.save

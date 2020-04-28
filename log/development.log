@@ -1084,3 +1084,71 @@ puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
 puma (3.12.4) lib/puma/server.rb:476:in `process_client'
 puma (3.12.4) lib/puma/server.rb:334:in `block in run'
 puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/ingredientes" for 172.21.0.1 at 2020-04-28 04:42:37 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IngredientesController#index as HTML
+  Rendering ingredientes/index.html.erb within layouts/application
+  [1m[36mIngrediente Load (0.5ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  Rendered ingredientes/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 174ms (Views: 155.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/ingredientes" for 172.21.0.1 at 2020-04-28 04:42:37 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IngredientesController#index as */*
+  Rendering ingredientes/index.html.erb within layouts/application
+  [1m[36mIngrediente Load (0.4ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  Rendered ingredientes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 42ms (Views: 35.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ingredientes/new" for 172.21.0.1 at 2020-04-28 04:42:49 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IngredientesController#new as HTML
+  Rendering ingredientes/new.html.erb within layouts/application
+  Rendered ingredientes/_form.html.erb (19.5ms)
+  Rendered ingredientes/new.html.erb within layouts/application (20.9ms)
+Started GET "/ingredientes" for 172.21.0.1 at 2020-04-28 04:42:49 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IngredientesController#index as */*
+  Rendering ingredientes/index.html.erb within layouts/application
+  [1m[36mIngrediente Load (0.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  Rendered ingredientes/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 132ms (Views: 120.4ms | ActiveRecord: 6.8ms)
+
+
+Completed 200 OK in 103ms (Views: 88.6ms | ActiveRecord: 11.9ms)
+
+
+Started POST "/ingredientes" for 172.21.0.1 at 2020-04-28 04:43:00 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IngredientesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Qk/LGJXM1IwcARxt9qEfjykuWJ7FjZejA2PYATPViM7fHpG+yDEPHt8l2dj41G6REPQxdaKsIgU6y9k+mAj4Q==", "ingrediente"=>{"nombre"=>"aj", "descripcion"=>"2"}, "commit"=>"Create Ingrediente"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ingredientes" ("nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "aj"], ["descripcion", "2"], ["created_at", "2020-04-28 04:43:00.671077"], ["updated_at", "2020-04-28 04:43:00.671077"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ingredientes/1
+Completed 302 Found in 10ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/ingredientes/1" for 172.21.0.1 at 2020-04-28 04:43:00 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IngredientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIngrediente Load (3.0ms)[0m  [1m[34mSELECT  "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ingredientes/show.html.erb within layouts/application
+  Rendered ingredientes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 28.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/ingredientes/1" for 172.21.0.1 at 2020-04-28 04:43:00 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mIngrediente Load (0.4ms)[0m  [1m[34mSELECT  "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ingredientes/show.html.erb within layouts/application
+  Rendered ingredientes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 76ms (Views: 57.1ms | ActiveRecord: 3.7ms)
+
+

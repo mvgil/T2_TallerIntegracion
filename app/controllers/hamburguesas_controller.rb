@@ -50,7 +50,7 @@ class HamburguesasController < ApplicationController
       render json: {message: "input invalido", status: 400}, status: 400
     else
       #si existen pero son parametros vacios ""
-      if @nombre.empty? || @precio.empty? || @descripcion.empty? || @imagen.empty?
+      if @nombre.empty? || @descripcion.empty? || @imagen.empty?
         render json: {message: "input invalido", status: 400}, status: 400
       else
         @ham = Hamburguesa.create(nombre: @nombre, precio: @precio,descripcion: @descripcion, imagen: @imagen  )

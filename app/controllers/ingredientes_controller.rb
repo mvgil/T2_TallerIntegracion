@@ -45,7 +45,7 @@ class IngredientesController < ApplicationController
       
 
       @ingrediente = Ingrediente.create(nombre: params[:nombre], descripcion: params[:descripcion], id: params[:id])
-      render json: @ingrediente, :except => [:created_at, :updated_at]
+      render json: @ingrediente, :except => [:created_at, :updated_at], status: 201
     end
   end
 

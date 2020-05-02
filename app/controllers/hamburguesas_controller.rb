@@ -150,6 +150,7 @@ class HamburguesasController < ApplicationController
   # DELETE /hamburguesas/1.json
   def destroy
     if Hamburguesa.exists?(id: params[:id])
+      @hamburguesa = Hamburguesa.find(params[:id])
       @hamburguesa.destroy
       render json: {message: "hamburguesa eliminada", status: 200}, status: 200
     else

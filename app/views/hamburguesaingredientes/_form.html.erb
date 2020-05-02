@@ -1,0 +1,27 @@
+<%= form_with(model: hamburguesaingrediente, local: true) do |form| %>
+  <% if hamburguesaingrediente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hamburguesaingrediente.errors.count, "error") %> prohibited this hamburguesaingrediente from being saved:</h2>
+
+      <ul>
+      <% hamburguesaingrediente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_hamburguesa %>
+    <%= form.number_field :id_hamburguesa, id: :hamburguesaingrediente_id_hamburguesa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_ingrediente %>
+    <%= form.number_field :id_ingrediente, id: :hamburguesaingrediente_id_ingrediente %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module HamburguesaingredientesHelper
+end

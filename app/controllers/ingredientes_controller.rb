@@ -1,5 +1,5 @@
 class IngredientesController < ApplicationController
-  before_action :set_ingrediente, only: [:show, :edit, :update, :destroy]
+  #before_action :set_ingrediente, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token
 
   # GET /ingredientes
@@ -12,6 +12,17 @@ class IngredientesController < ApplicationController
   # GET /ingredientes/1
   # GET /ingredientes/1.json
   def show
+    if Ingrediente.exists?(id: params[:id])
+      @ingrediente = Ingrediente.find(params[:id])
+      render json: @ingrediente, :except => [:created_at, :updated_at]
+    else
+      if helpers.is_not_number?(params[:id])
+        render json: {message: 'id invalido', status: 400}, status: 400
+      else
+
+        render json: {message: 'ingrediente inexistente', status: 404}, status: 404
+      end
+    end
   end
 
   # GET /ingredientes/new
@@ -26,16 +37,15 @@ class IngredientesController < ApplicationController
   # POST /ingredientes
   # POST /ingredientes.json
   def create
-    @ingrediente = Ingrediente.new(ingrediente_params)
+    @nombre = params[:nombre]
+    @descripcion = params[:descripcion]
+    if @nombre.nil? || @descripcion.nil? || @nombre.empty? || @descripcion.empty? 
+      render json: {message: "input invalido", status: 400}, status: 400
+    else
+      
 
-    respond_to do |format|
-      if @ingrediente.save
-        format.html { redirect_to @ingrediente, notice: ingrediente_params }
-        format.json { render :show, status: :created, location: @ingrediente }
-      else
-        format.html { render :new }
-        format.json { render json: @ingrediente.errors, status: :unprocessable_entity }
-      end
+      @ingrediente = Ingrediente.create(nombre: params[:nombre], descripcion: params[:descripcion], id: params[:id])
+      render json: @ingrediente, :except => [:created_at, :updated_at]
     end
   end
 
@@ -56,11 +66,20 @@ class IngredientesController < ApplicationController
   # DELETE /ingredientes/1
   # DELETE /ingredientes/1.json
   def destroy
-    @ingrediente.destroy
-    respond_to do |format|
-      format.html { redirect_to ingredientes_url, notice: 'Ingrediente was successfully destroyed.' }
-      format.json { head :no_content }
+    if Ingrediente.exists?(id: params[:id])
+      @ingrediente = Ingrediente.find(params[:id])
+      if @ingrediente.hamburguesaingredientes.length > 0
+        render json: {message: 'Ingrediente no se puede borrar, se encuentra presente en una hamburguesa', status: 409}, status: 409
+      else
+
+        @ingrediente.destroy
+        render json: {message: 'ingrediente eliminado', status: 200}, status: 200
+      end
+    else
+      render json: {message: 'ingrediente inexistente', status: 404}, status: 404
     end
+    
+    
   end
 
   private

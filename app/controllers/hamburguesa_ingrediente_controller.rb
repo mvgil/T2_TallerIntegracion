@@ -1,0 +1,2 @@
+class HamburguesaIngredienteController < ApplicationController
+end

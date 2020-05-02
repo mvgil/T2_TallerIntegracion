@@ -111,7 +111,7 @@ class HamburguesasController < ApplicationController
 
         #nada 
       else
-        if @precio.empty? || helpers.is_not_number?(@precio)
+        if helpers.is_not_number?(@precio)
           @contador_invalidos += 1
         end
         #@hamburguesa.update_attribute(:precio, @precio)

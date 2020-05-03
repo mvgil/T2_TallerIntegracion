@@ -53,8 +53,13 @@ class HamburguesasController < ApplicationController
       if @nombre.empty? || @descripcion.empty? || @imagen.empty?
         render json: {message: "input invalido", status: 400}, status: 400
       else
-        @ham = Hamburguesa.create(nombre: @nombre, precio: @precio,descripcion: @descripcion, imagen: @imagen  )
-        render json: @ham.as_json(except: [:created_at, :updated_at], include: [:hamburguesaingredientes => {:only => :path}]), status: 201
+        if helpers.is_not_number?(@nombre) && helpers.is_not_number?(@imagen) && helpers.is_not_number?(@descripcion)
+          @ham = Hamburguesa.create(nombre: @nombre, precio: @precio,descripcion: @descripcion, imagen: @imagen  )
+          render json: @ham.as_json(except: [:created_at, :updated_at], include: [:hamburguesaingredientes => {:only => :path}]), status: 201
+        else
+          # son numeros int
+          render json: {message: "input invalido", status: 400}, status: 400
+        end
       end
     end
 
@@ -118,7 +123,7 @@ class HamburguesasController < ApplicationController
         #@hamburguesa.save
 
       end
-      if @contador_invalidos > 0
+      if @contador_invalidos > 0 || !helpers.is_not_number?(@nombre) || !helpers.is_not_number?(@descripcion) || !helpers.is_not_number?(@imagen) 
         ## hay parametros invalidos en alguno de los atributos q mandaron
         render json: {message: "parametros invalidos", status: 400}, status: 400
       else

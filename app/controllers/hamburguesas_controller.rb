@@ -74,57 +74,68 @@ class HamburguesasController < ApplicationController
     @descripcion = params[:descripcion]
     @precio = params[:precio]
     @contador_invalidos = 0
+    @posible_actua = 0
 
     #user.update_attribute(:name, "Zaiste")
     if Hamburguesa.exists?(id: params[:id])
       @hamburguesa = Hamburguesa.find(params[:id])
     
-      if @imagen.nil?
-        #nada 
-      else
+      if !@imagen.nil? && helpers.is_not_number?(@imagen)
         if @imagen.empty?
-          @contador_invalidos += 1
-          #render json: {message: "parametros invalidos", status: 400}, status: 400
+           @contador_invalidos += 1
+        else
+          @posible_actua += 1
         end
-
-        #@hamburguesa.update_attribute(:imagen, @imagen)
-        #@hamburguesa.save
-
-      end
-      if @nombre.nil?
-
-        #nada 
       else
+        if !helpers.is_not_number?(@imagen)
+          @contador_invalidos += 1
+          
+        end
+    
+      end
+
+
+      if !@nombre.nil? && helpers.is_not_number?(@nombre)
         if @nombre.empty?
+           @contador_invalidos += 1
+        else
+          @posible_actua += 1
+        end
+      else
+        if !helpers.is_not_number?(@nombre)
           @contador_invalidos += 1
         end
-        #@hamburguesa.update_attribute(:nombre, @nombre)
-        #@hamburguesa.save
-
       end
-      if @descripcion.nil?
 
-        #nada 
-      else
+
+      if !@descripcion.nil? && helpers.is_not_number?(@descripcion)
         if @descripcion.empty?
-          @contador_invalidos += 1
+           @contador_invalidos += 1
+        else
+          @posible_actua += 1
         end
-        #@hamburguesa.update_attribute(:descripcion, @descripcion)
-        #@hamburguesa.save
-
-      end
-      if @precio.nil?
-
-        #nada 
       else
-        if helpers.is_not_number?(@precio)
+        if !helpers.is_not_number?(@descripcion)
           @contador_invalidos += 1
         end
-        #@hamburguesa.update_attribute(:precio, @precio)
-        #@hamburguesa.save
-
       end
-      if @contador_invalidos > 0 || !helpers.is_not_number?(@nombre) || !helpers.is_not_number?(@descripcion) || !helpers.is_not_number?(@imagen) 
+
+
+      if helpers.is_not_number?(@precio) && !@precio.nil?
+        
+        @contador_invalidos += 1
+        
+      else
+        if !helpers.is_not_number?(@precio)
+          @posible_actua += 1
+        end
+      end
+
+  
+
+
+      
+      if @contador_invalidos > 0 || @posible_actua == 0
         ## hay parametros invalidos en alguno de los atributos q mandaron
         render json: {message: "parametros invalidos", status: 400}, status: 400
       else

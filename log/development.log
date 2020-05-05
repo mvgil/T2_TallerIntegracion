@@ -8448,3 +8448,211 @@ Processing by HamburguesasController#update as */*
 Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 2.9ms)
 
 
+Started POST "/hamburguesa?nombre=hola" for 172.24.0.1 at 2020-05-04 23:59:03 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/T2/app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected '!', expecting keyword_then or ';' or '\n'
+...pers.is_not_number?(@nombre)  !helpers.is_not_number?(@descr...
+...                              ^
+/T2/app/controllers/hamburguesas_controller.rb:55: syntax error, unexpected keyword_else, expecting keyword_end
+      else
+      ^~~~
+/T2/app/controllers/hamburguesas_controller.rb:183: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected '!', expecting keyword_then or ';' or '\n'
+app/controllers/hamburguesas_controller.rb:55: syntax error, unexpected keyword_else, expecting keyword_end
+app/controllers/hamburguesas_controller.rb:183: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/hamburguesa?nombre=hola" for 172.24.0.1 at 2020-05-05 00:01:45 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/T2/app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected '!', expecting keyword_then or ';' or '\n'
+...elpers.is_not_number?(@nombre)!  helpers.is_not_number?(@des...
+...                              ^
+/T2/app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected '!', expecting keyword_end
+...s.is_not_number?(@descripcion)!||  helpers.is_not_number?(@i...
+...                              ^
+/T2/app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected '!', expecting keyword_end
+...elpers.is_not_number?(@imagen)! || helpers.is_not_number?(@p...
+...                              ^
+/T2/app/controllers/hamburguesas_controller.rb:183: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected '!', expecting keyword_then or ';' or '\n'
+app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected '!', expecting keyword_end
+app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected '!', expecting keyword_end
+app/controllers/hamburguesas_controller.rb:183: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/hamburguesa?nombre=hola" for 172.24.0.1 at 2020-05-05 00:04:01 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/T2/app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+...s_not_number?(@nombre)  helpers.is_not_number?(@descripcion)...
+...                        ^~~~~~~
+/T2/app/controllers/hamburguesas_controller.rb:55: syntax error, unexpected keyword_else, expecting keyword_end
+      else
+      ^~~~
+/T2/app/controllers/hamburguesas_controller.rb:183: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+app/controllers/hamburguesas_controller.rb:55: syntax error, unexpected keyword_else, expecting keyword_end
+app/controllers/hamburguesas_controller.rb:183: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/hamburguesa?nombre=hola" for 172.24.0.1 at 2020-05-05 00:05:39 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/T2/app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+...s_not_number?(@nombre)  helpers.is_not_number?(@descripcion)...
+...                        ^~~~~~~
+/T2/app/controllers/hamburguesas_controller.rb:55: syntax error, unexpected keyword_else, expecting keyword_end
+      else
+      ^~~~
+/T2/app/controllers/hamburguesas_controller.rb:183: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+app/controllers/hamburguesas_controller.rb:55: syntax error, unexpected keyword_else, expecting keyword_end
+app/controllers/hamburguesas_controller.rb:183: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/hamburguesa?nombre=hola" for 172.24.0.1 at 2020-05-05 00:08:22 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/T2/app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+...s_not_number?(@nombre)  helpers.is_not_number?(@descripcion)...
+...                        ^~~~~~~
+/T2/app/controllers/hamburguesas_controller.rb:55: syntax error, unexpected keyword_else, expecting keyword_end
+      else
+      ^~~~
+/T2/app/controllers/hamburguesas_controller.rb:178: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/hamburguesas_controller.rb:53: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+app/controllers/hamburguesas_controller.rb:55: syntax error, unexpected keyword_else, expecting keyword_end
+app/controllers/hamburguesas_controller.rb:178: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/hamburguesa?nombre=hola" for 172.24.0.1 at 2020-05-05 00:08:53 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"hola"}
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hamburguesa?nombre=hola" for 172.24.0.1 at 2020-05-05 00:09:17 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"hola"}
+Completed 400 Bad Request in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hamburguesa?nombre=hola&descripcion&imagen&precio" for 172.24.0.1 at 2020-05-05 00:09:33 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"hola", "descripcion"=>nil, "imagen"=>nil, "precio"=>nil}
+Completed 400 Bad Request in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hamburguesa?nombre=hola&descripcion=h&imagen=h&precio=1" for 172.24.0.1 at 2020-05-05 00:09:43 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"hola", "descripcion"=>"h", "imagen"=>"h", "precio"=>"1"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.1ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "created_at", "updated_at", "imagen") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "hola"], ["precio", 1], ["descripcion", "h"], ["created_at", "2020-05-05 00:09:43.560512"], ["updated_at", "2020-05-05 00:09:43.560512"], ["imagen", "h"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mHamburguesaingrediente Load (4.1ms)[0m  [1m[34mSELECT "hamburguesaingredientes".* FROM "hamburguesaingredientes" WHERE "hamburguesaingredientes"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 20]]
+Completed 201 Created in 95ms (Views: 0.2ms | ActiveRecord: 32.7ms)
+
+
+Started POST "/hamburguesa?nombre=hola&descripcion=h&imagen=h&precio=" for 172.24.0.1 at 2020-05-05 00:09:49 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"hola", "descripcion"=>"h", "imagen"=>"h", "precio"=>""}
+Completed 400 Bad Request in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hamburguesa?nombre=hola&descripcion=h&imagen=h&precio=hhh" for 172.24.0.1 at 2020-05-05 00:09:53 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"hola", "descripcion"=>"h", "imagen"=>"h", "precio"=>"hhh"}
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hamburguesa?nombre=hola&descripcion=h&imagen=h&precio=hhh" for 172.24.0.1 at 2020-05-05 00:14:21 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"hola", "descripcion"=>"h", "imagen"=>"h", "precio"=>"hhh"}
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hamburguesa?nombre=hola&descripcion=h&imagen=h&precio=hhh&descripcion&nombre" for 172.24.0.1 at 2020-05-05 00:14:34 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>nil, "descripcion"=>nil, "imagen"=>"h", "precio"=>"hhh"}
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hamburguesa?nombre=hola&descripcion=h&imagen=h&precio=hhh&descripcion=hola&nombre=1" for 172.24.0.1 at 2020-05-05 00:14:41 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"1", "descripcion"=>"hola", "imagen"=>"h", "precio"=>"hhh"}
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hamburguesa?nombre=hola&descripcion=h&imagen=h&precio=1&descripcion=hola&nombre=1" for 172.24.0.1 at 2020-05-05 00:14:51 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"1", "descripcion"=>"hola", "imagen"=>"h", "precio"=>"1"}
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hamburguesa?nombre=hola&descripcion=h&imagen=h&precio=1&descripcion=hola&nombre=h" for 172.24.0.1 at 2020-05-05 00:14:59 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"h", "descripcion"=>"hola", "imagen"=>"h", "precio"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "created_at", "updated_at", "imagen") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "h"], ["precio", 1], ["descripcion", "hola"], ["created_at", "2020-05-05 00:14:59.330120"], ["updated_at", "2020-05-05 00:14:59.330120"], ["imagen", "h"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mHamburguesaingrediente Load (0.3ms)[0m  [1m[34mSELECT "hamburguesaingredientes".* FROM "hamburguesaingredientes" WHERE "hamburguesaingredientes"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 21]]
+Completed 201 Created in 22ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/ingrediente?nombre=hola&descripcion=chao" for 172.24.0.1 at 2020-05-05 00:21:51 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IngredientesController#create as */*
+  Parameters: {"nombre"=>"hola", "descripcion"=>"chao"}
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.4ms)[0m  [1m[32mINSERT INTO "ingredientes" ("nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "hola"], ["descripcion", "chao"], ["created_at", "2020-05-05 00:21:51.753007"], ["updated_at", "2020-05-05 00:21:51.753007"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 24ms (Views: 0.3ms | ActiveRecord: 15.0ms)
+
+
+Started POST "/ingrediente?nombre=hola" for 172.24.0.1 at 2020-05-05 00:21:57 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IngredientesController#create as */*
+  Parameters: {"nombre"=>"hola"}
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ingrediente?nombre=hola&descripcion" for 172.24.0.1 at 2020-05-05 00:22:05 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IngredientesController#create as */*
+  Parameters: {"nombre"=>"hola", "descripcion"=>nil}
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ingrediente?nombre=hola&descripcion=1" for 172.24.0.1 at 2020-05-05 00:22:08 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IngredientesController#create as */*
+  Parameters: {"nombre"=>"hola", "descripcion"=>"1"}
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ingrediente?nombre=hola&descripcion=h" for 172.24.0.1 at 2020-05-05 00:22:14 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IngredientesController#create as */*
+  Parameters: {"nombre"=>"hola", "descripcion"=>"h"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ingredientes" ("nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "hola"], ["descripcion", "h"], ["created_at", "2020-05-05 00:22:14.546522"], ["updated_at", "2020-05-05 00:22:14.546522"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 5ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/ingrediente?nombre=1&descripcion=h" for 172.24.0.1 at 2020-05-05 00:22:18 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IngredientesController#create as */*
+  Parameters: {"nombre"=>"1", "descripcion"=>"h"}
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+

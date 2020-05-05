@@ -39,13 +39,23 @@ class IngredientesController < ApplicationController
   def create
     @nombre = params[:nombre]
     @descripcion = params[:descripcion]
-    if @nombre.nil? || @descripcion.nil? || @nombre.empty? || @descripcion.empty? 
+    if @nombre.nil? || @descripcion.nil?  
       render json: {message: "input invalido", status: 400}, status: 400
     else
+      if helpers.is_not_number?(@nombre) && helpers.is_not_number?(@descripcion)
+        if !@nombre.empty? || !@descripcion.empty?
+          @ingrediente = Ingrediente.create(nombre: params[:nombre], descripcion: params[:descripcion], id: params[:id])
+          render json: @ingrediente, :except => [:created_at, :updated_at], status: 201
+        else
+          render json: {message: "input invalido", status: 400}, status: 400
+
+        end
+      else
+        render json: {message: "input invalido", status: 400}, status: 400
+      end
       
 
-      @ingrediente = Ingrediente.create(nombre: params[:nombre], descripcion: params[:descripcion], id: params[:id])
-      render json: @ingrediente, :except => [:created_at, :updated_at], status: 201
+      
     end
   end
 

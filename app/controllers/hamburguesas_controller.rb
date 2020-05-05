@@ -46,22 +46,23 @@ class HamburguesasController < ApplicationController
     @descripcion = params[:descripcion]
     @precio = params[:precio]
     @imagen = params[:imagen]
-    if @nombre.nil? || @precio.nil? || @descripcion.nil? || @imagen.nil? || helpers.is_not_number?(@precio)  
+    if  @nombre.nil?|| @descripcion.nil?||  @imagen.nil? || @precio.nil?
       render json: {message: "input invalido", status: 400}, status: 400
     else
-      #si existen pero son parametros vacios ""
-      if @nombre.empty? || @descripcion.empty? || @imagen.empty?
+      #si existen pero son parametros vacios o no son del tipo""
+      if  !helpers.is_not_number?(@nombre) || !helpers.is_not_number?(@descripcion)||  !helpers.is_not_number?(@imagen) || helpers.is_not_number?(@precio) 
         render json: {message: "input invalido", status: 400}, status: 400
       else
-        if helpers.is_not_number?(@nombre) && helpers.is_not_number?(@imagen) && helpers.is_not_number?(@descripcion)
+        ## no es nil ni numero, pero podria ser vacio!
+        if @nombre.empty? || @descripcion.empty? || @imagen.empty?
+          render json: {message: "input invalido", status: 400}, status: 400
+        else
           @ham = Hamburguesa.create(nombre: @nombre, precio: @precio,descripcion: @descripcion, imagen: @imagen  )
           render json: @ham.as_json(except: [:created_at, :updated_at], include: [:hamburguesaingredientes => {:only => :path}]), status: 201
-        else
-          # son numeros int
-          render json: {message: "input invalido", status: 400}, status: 400
         end
       end
     end
+
 
   end
 
